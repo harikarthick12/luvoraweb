@@ -114,4 +114,42 @@ document.addEventListener('DOMContentLoaded', () => {
             glassCard.style.animation = 'float 6s ease-in-out infinite';
         });
     }
+
+    // --- Floating Music Notes Animation ---
+    const meshBg = document.querySelector('.mesh-bg');
+    if (meshBg) {
+        const createNote = () => {
+            const note = document.createElement('i');
+            // Use organic, music-related icons
+            const icons = ['fa-music', 'fa-compact-disc', 'fa-headphones', 'fa-record-vinyl'];
+            const randomIcon = icons[Math.floor(Math.random() * icons.length)];
+            note.classList.add('fas', randomIcon, 'floating-note');
+            
+            // Randomize size, position, and duration for an organic human-made feel
+            const size = Math.random() * 15 + 12; // 12px to 27px
+            const left = Math.random() * 100; // 0vw to 100vw
+            const duration = Math.random() * 20 + 15; // 15s to 35s
+            
+            note.style.fontSize = `${size}px`;
+            note.style.left = `${left}vw`;
+            note.style.animationDuration = `${duration}s`;
+            
+            meshBg.appendChild(note);
+            
+            // Cleanup after animation completes
+            setTimeout(() => {
+                if (note.parentNode) {
+                    note.remove();
+                }
+            }, duration * 1000);
+        };
+
+        // Create initial notes spread out over time
+        for (let i = 0; i < 15; i++) {
+            setTimeout(createNote, Math.random() * 10000);
+        }
+
+        // Continually spawn new ones
+        setInterval(createNote, 3000);
+    }
 });

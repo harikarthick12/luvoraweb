@@ -1,18 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luvora - Discover & Feel the Music</title>
-    <meta name="description" content="Luvora is a beautifully designed music player with a massive catalog.">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" href="style.css">
+    <title>Luvora - Ad-Free Lossless Music Streaming App</title>
+    <meta name="description"
+        content="Listen to millions of songs without ads. Luvora delivers a high-quality, lossless music experience with beautiful UI and lightning-fast performance.">
+    <meta name="keywords"
+        content="Luvora, Luvora Music, Ad-Free Music App, Lossless Music App, Spotify Alternative, Android Music Player, Music Streaming, Offline Music Player, Free Music Streaming, Best ad free music app, Spotify alternative without ads, Lossless music streaming app, Music app for Android, Hari karthick, Harish, Full stack developer, Free high quality music player">
+    <meta name="author" content="Hari Karthick">
+    <meta name="robots" content="index,follow">
+
+    <!-- Open Graph (Social Sharing) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Luvora - Ad-Free Music Streaming">
+    <meta property="og:description" content="Experience lossless music without annoying ads.">
+    <meta property="og:image" content="https://luvoraweb.netlify.app/preview.png">
+    <meta property="og:url" content="https://luvoraweb.netlify.app/">
+    <meta property="og:site_name" content="Luvora">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Luvora Music">
+    <meta name="twitter:description" content="Ad-Free Lossless Music Streaming">
+    <meta name="twitter:image" content="https://luvoraweb.netlify.app/preview.png">
+
+    <!-- Favicons -->
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/logo.png">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://luvoraweb.netlify.app/">
+
+    <!-- Preload fonts & Styles -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;600;800&display=swap"
+        as="style">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;600;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="preload" href="style.css" as="style">
+    <link rel="stylesheet" href="style.css">
+
     <!-- Font Awesome -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Analytics 4 (Placeholder) -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR-GA4-MEASUREMENT-ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-7S0M0BG5Q7https://github.com/harikarthick12/luvoraweb.git');
+    </script>
+
+    <!-- Structured Data (Schema) -->
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"SoftwareApplication",
+      "name":"Luvora",
+      "applicationCategory":"MusicApplication",
+      "operatingSystem":"Android",
+      "description":"Ad-Free Lossless Music Streaming Application",
+      "url":"https://luvoraweb.netlify.app",
+      "offers":{
+        "@type":"Offer",
+        "price":"0",
+        "priceCurrency":"USD"
+      }
+    }
+    </script>
 </head>
+
 <body>
     <!-- Mesh Gradient Background -->
     <div class="mesh-bg"></div>
@@ -23,7 +89,7 @@
     <!-- Navigation -->
     <nav class="navbar reveal">
         <div class="logo-container">
-            <img src="logo.png" alt="Luvora Logo" class="nav-logo">
+            <img src="logo.png" alt="Luvora Ad-Free Music Streaming Logo" class="nav-logo">
             <span class="nav-brand">Luvora</span>
         </div>
         <div class="nav-links">
@@ -37,24 +103,28 @@
     <header class="hero" id="home">
         <div class="hero-content reveal-up">
 
-            <h1 class="hero-title">Experience Music <br><span class="gradient-text">Like Never Before</span></h1>
-            <p class="hero-subtitle">Listen to millions of songs, ad-free, with seamless quality. Dive into a world of rich audio tailored exclusively for you.</p>
+            <h1 class="hero-title">Luvora - <br><span class="gradient-text">Ad-Free Lossless Music Streaming App</span>
+            </h1>
+            <p class="hero-subtitle">Listen to millions of songs, ad-free, with seamless quality. Dive into a world of
+                rich audio tailored exclusively for you.</p>
             <div class="hero-buttons">
                 <a href="#download" class="btn-primary shimmer-btn">Get Luvora Now</a>
             </div>
         </div>
-        
+
         <div class="hero-visual reveal-up delay-1">
             <div class="glass-card main-player-card floating">
                 <div class="player-top">
-                    <img src="logo.png" alt="Luvora Player" class="player-cover">
+                    <img src="logo.png" alt="Luvora Lossless Music Streaming App Player" class="player-cover">
                 </div>
                 <div class="player-info">
                     <h3 class="track-title">Feel the Beat</h3>
                     <p class="track-artist">Luvora Originals</p>
                 </div>
                 <div class="player-progress">
-                    <div class="progress-bar"><div class="progress-fill"></div></div>
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
                     <div class="progress-time"><span>1:24</span><span>3:45</span></div>
                 </div>
                 <div class="player-controls">
@@ -69,14 +139,15 @@
     <!-- Features Section -->
     <section class="features" id="features">
         <div class="section-header reveal-up">
-            <h2 class="section-title">Why Choose Luvora?</h2>
+            <h2 class="section-title">Why Luvora</h2>
             <p class="section-subtitle">Crafted for audiophiles. Designed for everyone.</p>
         </div>
         <div class="feature-grid">
             <div class="feature-card reveal-up delay-1 hover-glow">
                 <div class="card-icon-wrapper"><i class="fas fa-headphones-simple feature-icon"></i></div>
                 <h3>Lossless Audio</h3>
-                <p>Enjoy studio-quality sound without any compression. Hear every detail exactly as the artist intended.</p>
+                <p>Enjoy studio-quality sound without any compression. Hear every detail exactly as the artist intended.
+                </p>
             </div>
             <div class="feature-card reveal-up delay-2 hover-glow">
                 <div class="card-icon-wrapper"><i class="fas fa-cloud-arrow-down feature-icon"></i></div>
@@ -86,7 +157,8 @@
             <div class="feature-card reveal-up delay-3 hover-glow">
                 <div class="card-icon-wrapper"><i class="fas fa-list-ul feature-icon"></i></div>
                 <h3>Custom Playlists</h3>
-                <p>Advanced AI-curated playlists tailored specifically to your unique musical taste and current mood.</p>
+                <p>Advanced AI-curated playlists tailored specifically to your unique musical taste and current mood.
+                </p>
             </div>
         </div>
     </section>
@@ -94,22 +166,26 @@
     <!-- Screenshots Carousel (3D Floating Stack) -->
     <section class="screenshots" id="screenshots">
         <div class="section-header reveal-up">
-            <h2 class="section-title">Stunning Interface</h2>
+            <h2 class="section-title">Features</h2>
             <p class="section-subtitle">A seamless, beautiful experience across all your devices.</p>
         </div>
         <div class="carousel-container reveal-up delay-1">
             <div class="carousel-track" id="carouselTrack">
                 <div class="carousel-item">
-                    <img src="screenshot1.jpg" alt="Luvora App Screenshot 1" class="screenshot-img">
+                    <img src="screenshot1.jpg" alt="Luvora Ad-Free Music App Home Screen" class="screenshot-img"
+                        loading="lazy">
                 </div>
                 <div class="carousel-item">
-                    <img src="screenshot2.jpg" alt="Luvora App Screenshot 2" class="screenshot-img">
+                    <img src="screenshot2.jpg" alt="Luvora Music Player Interface" class="screenshot-img"
+                        loading="lazy">
                 </div>
                 <div class="carousel-item">
-                    <img src="screenshot3.jpg" alt="Luvora App Screenshot 3" class="screenshot-img">
+                    <img src="screenshot3.jpg" alt="Luvora Custom Playlists and Offline Music" class="screenshot-img"
+                        loading="lazy">
                 </div>
                 <div class="carousel-item">
-                    <img src="screenshot4.jpg" alt="Luvora App Screenshot 4" class="screenshot-img">
+                    <img src="screenshot4.jpg" alt="Luvora High Quality Audio Settings" class="screenshot-img"
+                        loading="lazy">
                 </div>
             </div>
             <div class="carousel-controls">
@@ -122,10 +198,11 @@
     <!-- Download Section -->
     <section class="download-section reveal-up" id="download">
         <div class="download-box">
-            <h2>Ready to tune in?</h2>
+            <h2>Download</h2>
             <p>Download Luvora today and unlock the ultimate music experience.</p>
             <div class="download-buttons">
-                <a href="https://github.com/harikarthick12/luvora/releases/download/v5.26.2/luvora-v5.26.2.apk" class="btn-primary btn-large shimmer-btn">
+                <a href="https://github.com/harikarthick12/luvora/releases/download/v5.26.2/luvora-v5.26.2.apk"
+                    class="btn-primary btn-large shimmer-btn">
                     <i class="fas fa-download"></i> Download App
                 </a>
             </div>
@@ -140,9 +217,12 @@
                 <span>Luvora</span>
             </div>
             <div class="social-links">
-                <a href="https://www.linkedin.com/in/harikarthick12/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://harikarthickssportfolio.netlify.app/" target="_blank" title="Portfolio"><i class="fas fa-briefcase"></i></a>
-                <a href="https://github.com/harikarthick12" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/harikarthick12/" target="_blank" title="LinkedIn"><i
+                        class="fab fa-linkedin-in"></i></a>
+                <a href="https://harikarthickssportfolio.netlify.app/" target="_blank" title="Portfolio"><i
+                        class="fas fa-briefcase"></i></a>
+                <a href="https://github.com/harikarthick12" target="_blank" title="GitHub"><i
+                        class="fab fa-github"></i></a>
             </div>
         </div>
         <p class="copyright">&copy; 2026 Luvora Music. All rights reserved.</p>
@@ -150,4 +230,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>

@@ -152,4 +152,36 @@ document.addEventListener('DOMContentLoaded', () => {
         // Continually spawn new ones
         setInterval(createNote, 3000);
     }
+
+    // --- Direct Latest APK Download ---
+    const directDownloadBtn = document.getElementById('direct-download-btn');
+    if (directDownloadBtn) {
+        directDownloadBtn.addEventListener('click', async (e) => {
+            e.preventDefault();
+            const originalText = directDownloadBtn.innerHTML;
+            directDownloadBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Fetching...';
+            
+            try {
+                const response = await fetch('https://api.github.com/repos/harikarthick12/luvora/releases/latest');
+                const data = await response.json();
+                
+                // Find the APK asset
+                const apkAsset = data.assets.find(asset => asset.name.endsWith('.apk'));
+                
+                if (apkAsset) {
+                    // Trigger download
+                    window.location.href = apkAsset.browser_download_url;
+                } else {
+                    alert('Could not find the APK in the latest release.');
+                    window.location.href = 'https://github.com/harikarthick12/luvora/releases/latest';
+                }
+            } catch (error) {
+                console.error('Error fetching latest release:', error);
+                alert('Failed to fetch the latest download link. Please check the GitHub releases page.');
+                window.open('https://github.com/harikarthick12/luvora/releases/latest', '_blank');
+            } finally {
+                directDownloadBtn.innerHTML = originalText;
+            }
+        });
+    }
 });
